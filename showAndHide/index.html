@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show and Hide</title>
+</head>
+
+<body>
+  <h1 class="text">Hide me!</h1>
+  <button class="show-and-hide">Hide or Reveal</button>
+
+  <style>
+    .hidden {
+      visibility: hidden;
+    }
+  </style>
+
+  <script>
+    const text = document.querySelector('.text');
+    const button = document.querySelector('.show-and-hide');
+
+    function showAndHide() {
+      text.classList.toggle('hidden');
+    }
+
+    button.addEventListener('click', showAndHide);
+  </script>
+  
+</body>
+</html>

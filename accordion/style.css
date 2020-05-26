@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -44,7 +45,7 @@ h1 {
   height: 100%;
   display: flex;
   align-items: center;
-  transition: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
+  transition: .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
 }
 .accordion__dropdown-text {
   max-height: 0; /* set to 0 at first, js will change it. */
@@ -56,7 +57,7 @@ h1 {
   margin-bottom: 1rem;
 }
 .accordion-wrapper.open .accordion__dropdown-text {
-  max-height: 400px;
+  max-height: 1000px;
 }
 .accordion-wrapper.open .accordion__header .fa-caret-square-down {
   transform: rotate(180deg);

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/833c17a86a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Show Password</title>
+  </head>
+
+  <body>
+    <h1>Reveal Password</h1>
+
+    <form class="password-form">
+      <div class="user">
+        <label for="username">Username: </label>
+        <input type="text" name="Username" id="username">
+      </div>
+      <div class="password-field">
+        <label for="password">Password: </label>
+        <input type="password" name="Password" id="password">
+        <button class="reveal-password-button"><i class="far fa-eye"></i></button>
+        <!--<i class="far fa-eye-slash"></i>-->
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="./src/main.js"></script>
+  </body>
+</html>

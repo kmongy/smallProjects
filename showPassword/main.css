@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
+.password-form {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.user,
+.password-field {
+  width: 350px;
+}
+.user input,
+.password-field input {
+  font-family: inherit;
+  outline: none;
+  width: 80%;
+  padding: .3rem 0;
+  margin: .5rem 0;
+} 

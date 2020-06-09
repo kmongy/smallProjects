@@ -15,4 +15,4 @@ function toggleText() {
   });
 }
 
-accordionHeading.forEach(dropdownItem => dropdownItem.addEventListener('click', toggleText))
+accordionHeading.forEach(dropdownItem => dropdownItem.addEventListener('click', toggleText));

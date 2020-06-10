@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/833c17a86a.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Muli&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.scss">
     <title>Client Side Form Validation</title>
@@ -21,12 +22,13 @@
 
         <form class="main-form">
           <div class="inner-form-wrapper">
-            <label for="firstname">First Name: </label>
-            <input type="text" id="firstname" name="firstname">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name">
           </div>
           <div class="inner-form-wrapper">
-            <label for="lastname">Last Name: </label>
-            <input type="text" id="lastname" name="lastname">
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username">
+            <span class="error-message">error</span>
           </div>
           <div class="inner-form-wrapper">
             <label for="email">Email: </label>
@@ -34,16 +36,22 @@
             <span class="error-message">error</span>
           </div>
           <div class="inner-form-wrapper">
-            <label for="password">Password: </label>
-            <input type="password" id="password" name="password">
-            <span class="error-message">error</span>
+            <div class="password-wrapper">
+              <label for="password">Password: </label>
+              <input type="password" id="password" name="password">
+              <button class="reveal"><i class="far fa-eye"></i></button>
+              <span class="error-message">error</span>
+            </div>
           </div>
           <div class="inner-form-wrapper">
-            <label for="password-check">Confirm Password: </label>
-            <input type="password" id="password-check" name="password-check">
-            <span class="error-message">error</span>
+            <div class="password-wrapper">
+              <label for="password-check">Confirm Password: </label>
+              <input type="password" id="password-check" name="password-check">
+              <button class="reveal"><i class="far fa-eye"></i></button>
+              <span class="error-message">error</span>
+            </div>
           </div>
-          <button type="submit">Submit</button>
+          <button class="form-submit-button" type="submit">Submit</button>
         </form>
 
         <div class="main-login">
@@ -53,6 +61,7 @@
       </div>
     </main>
 
+    <script src="./src/validation.js"></script>
   </body>
 
 </html>

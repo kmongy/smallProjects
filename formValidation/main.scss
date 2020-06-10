@@ -66,6 +66,41 @@ main {
     flex-direction: column;
     position: relative;
   }
+  .inner-form-wrapper.error .error-message {
+    visibility: visible;
+  }
+  .inner-form-wrapper.error input {
+    border: 2px solid rgb(224, 38, 38);
+  }
+  .error-message {
+    position: absolute;
+    bottom: 0;
+    left: 0.5rem;
+    color: rgb(224, 38, 38);
+    font-size: 0.8rem;
+    visibility: hidden;
+  }
+  .password-wrapper {
+    input {
+      width: 90%;
+    }
+    #password,
+    #password-check {
+      margin-top: 0.5rem;
+    }
+    .reveal {
+      background: none;
+      border: none;
+      outline: none;
+      border: 2px solid lightgrey;
+      border-radius: 4px;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+    .reveal:focus {
+      border: 2px solid $yellow;
+    }
+  }
   label {
     padding: 0.5rem 0;
   }
@@ -75,20 +110,13 @@ main {
     border: none;
     border: 2px solid lightgrey;
     border-radius: 4px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
   input:focus {
     outline: none;
     border: 2px solid $yellow;
   }
-  .error-message {
-    position: absolute;
-    bottom: 0;
-    left: 0.5rem;
-    font-size: 0.8rem;
-    visibility: hidden;
-  }
-  button {
+  .form-submit-button {
     border: none;
     background: none;
     border: 2px solid lightgrey;
@@ -101,7 +129,7 @@ main {
     outline: none;
     cursor: pointer;
   }
-  button:hover {
+  .form-submit-button:hover {
     background: $yellow;
     border: 2px solid $yellow;
   }

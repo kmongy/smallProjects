@@ -12,25 +12,38 @@
   <body>
     <main>
       <div class="main-img-section">
-        <h1>setting goals</h1>
-        <img src="./assets/imgs/signup.jpg" alt="Milk and Honey photo">
-        <caption>Photo by Estée Janssens on Unsplash</caption>
       </div>
       <div class="main-sign-up">
+        <h1>setting goals</h1>
         <p class="signup-heading">Sign Up</p>
         <p>Fill in the form to create an account.</p>
         <hr class="custom-hr">
+
         <form class="main-form">
-          <label for="firstname">First Name: </label>
-          <input type="text" id="firstname" name="firstname">
-          <label for="lastname">Last Name: </label>
-          <input type="text" id="lastname" name="lastname">
-          <label for="email">Email: </label>
-          <input type="email" id="email" name="email">
-          <label for="password">Password: </label>
-          <input type="password" id="password" name="password">
-          <label for="password-check">Confirm Password: </label>
-          <input type="password" id="password-check" name="password-check">
+          <div class="inner-form-wrapper">
+            <label for="firstname">First Name: </label>
+            <input type="text" id="firstname" name="firstname">
+          </div>
+          <div class="inner-form-wrapper">
+            <label for="lastname">Last Name: </label>
+            <input type="text" id="lastname" name="lastname">
+          </div>
+          <div class="inner-form-wrapper">
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email">
+            <span class="error-message">error</span>
+          </div>
+          <div class="inner-form-wrapper">
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password">
+            <span class="error-message">error</span>
+          </div>
+          <div class="inner-form-wrapper">
+            <label for="password-check">Confirm Password: </label>
+            <input type="password" id="password-check" name="password-check">
+            <span class="error-message">error</span>
+          </div>
+          <button type="submit">Submit</button>
         </form>
 
         <div class="main-login">

@@ -13,11 +13,10 @@ html {
   margin: 0;
   padding: 0;
 }
-h1,
-h2 {
+h1 {
   font-family: $headings;
   font-size: 3rem;
-  padding: 1rem 0;
+  padding-bottom: 2rem;
 }
 body {
   font-family: $regularFont;
@@ -26,21 +25,20 @@ main {
   background: $yellow;
   height: 100vh;
   display: flex;
-  align-items: center;
   padding: 1rem;
 }
 .main-img-section {
-  width: 50%;
-
-  img {
-    width: 100%;
-  }
+  background: url(./assets/imgs/signup.jpg) center no-repeat;
+  background-size: cover;
+  width: 60%;
+  height: 95vh;
 }
 .main-sign-up {
   background: $offwhite;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
+  height: 95vh;
   padding: 1rem 2rem;
   margin-bottom: 1.5rem;
 
@@ -55,8 +53,8 @@ main {
   }
   .custom-hr {
     border: none;
-    border: 1px solid grey;
-    margin-bottom: 2rem;
+    border: 1px solid $yellow;
+    margin-bottom: 1rem;
   }
 }
 .main-login {
@@ -67,4 +65,23 @@ main {
 .main-form {
   display: flex;
   flex-direction: column;
+
+  label {
+    padding: 0.5rem 0;
+  }
+  input {
+    padding: 0.5rem;
+    font-family: inherit;
+    border: none;
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  input:focus {
+    outline: none;
+    border: 2px solid $yellow;
+  }
+  .error-message {
+    position: absolute;
+  }
 }

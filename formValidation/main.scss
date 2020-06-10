@@ -88,7 +88,8 @@ main {
     #password-check {
       margin-top: 0.5rem;
     }
-    .reveal {
+    .reveal,
+    .reveal-check {
       background: none;
       border: none;
       outline: none;
@@ -97,7 +98,8 @@ main {
       padding: 0.5rem;
       cursor: pointer;
     }
-    .reveal:focus {
+    .reveal:focus,
+    .reveal-check:focus {
       border: 2px solid $yellow;
     }
   }

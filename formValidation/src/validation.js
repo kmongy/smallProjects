@@ -1,5 +1,5 @@
 const mainForm = document.querySelector('.main-form');
-const name = document.querySelector('#name');
+const formName = document.querySelector('#name');
 const username = document.querySelector('#username');
 const email = document.querySelector('#email');
 const formPassword = document.querySelector('#password');
@@ -12,7 +12,7 @@ const revealPasswordCheckBtn = document.querySelector('.reveal-check');
 function submitForm(event) {
   event.preventDefault();
 
-  checkRequired([name, username, email, formPassword, passwordCheck]);
+  checkRequired([formName, username, email, formPassword, passwordCheck]);
   checkLength(username, 5);
   checkLength(formPassword, 8);
   validateEmail(email);

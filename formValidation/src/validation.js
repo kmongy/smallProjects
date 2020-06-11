@@ -22,10 +22,17 @@ function error(input, message) {
   errorMessageSpan.innerText = message;
 }
 
+function success(input) {
+  const formHandlingSuccess = input.parentElement;
+  formHandlingSuccess.className = 'inner-form-wrapper';
+}
+
 function checkRequired(inputArray) {
   inputArray.forEach((input) => {
     if (input.value.trim() === '') {
       error(input, `${input.id} is required`);
+    } else {
+      success(input);
     }
   });
 }

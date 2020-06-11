@@ -16,19 +16,32 @@ function submitForm(event) {
   checkLength(username, 5);
   checkLength(formPassword, 8);
   validateEmail(email);
+  passwordMatch(formPassword, passwordCheck);
 }
 
 function error(input, message) {
-  const formErrorHandling = input.parentElement;
+  let formErrorHandling = input.parentElement;
   const errorMessageSpan = formErrorHandling.querySelector('.error-message');
 
-  formErrorHandling.className = 'inner-form-wrapper error';
-  errorMessageSpan.innerText = message;
+  if (formErrorHandling.className === 'password-wrapper') {
+    formErrorHandling = input.parentElement.parentElement;
+    formErrorHandling.className = 'inner-form-wrapper error';
+    errorMessageSpan.innerText = message;
+  } else {
+    formErrorHandling.className = 'inner-form-wrapper error';
+    errorMessageSpan.innerText = message;
+  }
 }
 
 function success(input) {
-  const formHandlingSuccess = input.parentElement;
-  formHandlingSuccess.className = 'inner-form-wrapper success';
+  let formSuccessHandling = input.parentElement;
+
+  if (formSuccessHandling.className === 'password-wrapper') {
+    formSuccessHandling = input.parentElement.parentElement;
+    formSuccessHandling.className = 'inner-form-wrapper success';
+  } else {
+    formSuccessHandling.className = 'inner-form-wrapper success';
+  }
 }
 
 function checkRequired(inputArray) {
@@ -53,6 +66,12 @@ function validateEmail(email) {
     success(email);
   } else {
     error(email, 'Please enter a valid email');
+  }
+}
+
+function passwordMatch(password1, password2) {
+  if (password1.value !== password2.value) {
+    error(password2, 'Password does not match');
   }
 }
 

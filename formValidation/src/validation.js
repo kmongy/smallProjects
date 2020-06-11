@@ -77,6 +77,16 @@ function passwordMatch(password1, password2) {
 
 function revealPassword(event) {
   event.preventDefault();
+
+  let currentButton = event.currentTarget;
+
+  if (currentButton.previousElementSibling.type === 'password') {
+    currentButton.previousElementSibling.type = 'text';
+    currentButton.innerHTML = '<i class="far fa-eye-slash"></i>';
+  } else if (currentButton.previousElementSibling.type === 'text') {
+    currentButton.previousElementSibling.type = 'password';
+    currentButton.innerHTML = '<i class="far fa-eye"></i>';
+  }
 }
 
 mainForm.addEventListener('submit', submitForm);

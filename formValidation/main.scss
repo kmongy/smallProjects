@@ -72,6 +72,9 @@ main {
   .inner-form-wrapper.error input {
     border: 2px solid rgb(224, 38, 38);
   }
+  .inner-form-wrapper.success input {
+    border: 2px solid $yellow;
+  }
   .error-message {
     position: absolute;
     bottom: 0;
@@ -128,7 +131,6 @@ main {
     font-family: $headings;
     font-size: 1.2rem;
     font-weight: 700;
-    outline: none;
     cursor: pointer;
   }
   .form-submit-button:hover {

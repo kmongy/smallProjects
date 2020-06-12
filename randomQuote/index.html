@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron Swanson Random Quotes</title>
+  </head>
+
+  <body>
+    <h1>Ron Swanson Quotes</h1>
+
+    <div class="wrapper">
+      <div class="quotes-container"></div>
+      <button class="refresh">New Quote</button>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .quotes-container {
+        border: 2px solid grey;
+        font-size: 1.2rem;
+        width: 50%;
+        padding: .5rem;
+        text-align: center;
+      }
+
+      .refresh {
+        font-family: inherit;
+        font-size: 1rem;
+        padding: .5rem;
+        margin-top: 1rem;
+      }
+    </style>
+
+    <script src="quote.js"></script>
+  </body>
+
+</html>

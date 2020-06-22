@@ -24,9 +24,9 @@ function calculateDegrees(event) {
 
 function convertToFahrenheit(celsius) {
   celsius = initialCelsius.value;
-  let conversion = (celsius * 1.8 + 32).toFixed(0);
+  let conversion = (celsius * 1.8 + 32).toFixed(1);
 
-  fahrenheitOutput.innerHTML = `
+  celsiusOutput.innerHTML = `
   <p>Your Celsius value was ${celsius}</p>
   <p class="fahrenheit-output">${conversion}&#176; Fahrenheit</p>
   `;
@@ -34,9 +34,9 @@ function convertToFahrenheit(celsius) {
 
 function convertToCelsius(fahrenheit) {
   fahrenheit = initialFahrenheit.value;
-  let conversion = ((fahrenheit - 32) / 1.8).toFixed(0);
+  let conversion = ((fahrenheit - 32) / 1.8).toFixed(1);
 
-  celsiusOutput.innerHTML = `
+  fahrenheitOutput.innerHTML = `
   <p>Your Fahrenheit value was ${fahrenheit}</p>
   <p class="celsius-output">${conversion}&#176; Celsius</p>
   `;

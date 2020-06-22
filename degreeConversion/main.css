@@ -61,3 +61,12 @@ h1 {
   padding: 0.5rem;
   cursor: pointer;
 }
+.temp-wrapper {
+  text-align: center;
+  margin-top: 4rem;
+}
+.celsius-output,
+.fahrenheit-output {
+  font-size: 2rem;
+  padding: 1rem;
+}

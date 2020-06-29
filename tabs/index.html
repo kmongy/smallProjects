@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Some Tabs</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="tabs">
+        <div role="tablist" aria-label="Programming Languages">
+          <button role="tab" aria-selected="true" id="js">Javascript</button>
+          <button role="tab" aria-selected="false" id="ruby">Ruby</button>
+          <button role="tab" aria-selected="false" id="php">PHP</button>
+        </div>
+
+        <div role="tabpanel" aria-labelledby="js">
+          <p>Javascript is great!</p>
+        </div>
+        <div role="tabpanel" aria-labelledby="ruby" hidden>
+          <p>Ruby is great!</p>
+        </div>
+        <div role="tabpanel" aria-labelledby="php" hidden>
+          <p>PHP is great!</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 4rem 8rem;
+}
+.tabs {
+  display: grid;
+}
+[role='tablist'] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+[role='tabpanel'] {
+  background: rgb(62, 62, 216);
+  color: white;
+  padding: 2rem;
+}
+button {
+  background: lightgrey;
+  border: 0;
+  border-radius: 4px 4px 0 0;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  --bs-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -2px 5px var(--bs-color);
+  cursor: pointer;
+}
+button[aria-selected='true'] {
+  background: rgb(62, 62, 216);
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+button:focus {
+  outline: 0;
+  --bs-color: rgba(0, 0, 0, 0.5);
+}

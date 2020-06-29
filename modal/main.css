@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: lightgrey;
+  font-family: sans-serif;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.cards h2 {
+  padding: 1rem 0;
+}
+.cards button {
+  background: none;
+  border: none;
+  background: rgb(61, 61, 241);
+  color: white;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.card {
+  background: white;
+  padding: 1rem;
+}
+.card img {
+  width: 100%;
+}
+.modal-outer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.modal-outer img {
+  width: 100%;
+}
+.modal-outer.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-inner {
+  min-width: 400px;
+  max-width: 600px;
+  min-height: 200px;
+  background: white;
+  padding: 2rem;
+}

@@ -38,6 +38,10 @@ h1 {
   font-size: 1rem;
   padding: 0.5rem;
 }
+.todo-form input:focus {
+  border: 1px solid rgb(60, 60, 226);
+  box-shadow: 2px 2px 8px rgb(60, 60, 226);
+}
 .todo-form button {
   background: none;
   border: none;

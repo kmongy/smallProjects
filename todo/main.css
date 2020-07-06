@@ -32,7 +32,7 @@ h1 {
 }
 .todo-form input {
   border: none;
-  border: 2px solid rgb(60, 60, 226);
+  border: 1px solid rgb(60, 60, 226);
   outline: none;
   font-family: inherit;
   font-size: 1rem;
@@ -53,13 +53,9 @@ h1 {
   padding: 2rem 1.5rem;
   width: 500px;
 }
-.todo-list {
-  padding: 0.5rem;
-}
-.todo-list ul {
+.todos-list {
   list-style: none;
   margin: 0;
-  padding: 0;
 }
 .todo-item {
   padding: 1rem 0;
@@ -75,12 +71,16 @@ h1 {
 .todo-item input[type='checkbox']:checked + .itemName {
   opacity: 0.5;
 }
-.todo-list button {
-  padding: 0;
+.todos-list button {
+  background: none;
+  border: none;
+  background: rgb(211, 69, 69);
+  color: white;
+  padding: 0 0.2rem;
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.2s;
 }
-.todo-list button:hover {
+.todos-list button:hover {
   transform: scale(1.4);
 }

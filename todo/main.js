@@ -56,7 +56,7 @@ function deleteItem(id) {
 
 function markAsComplete(id) {
   const itemRef = items.find((item) => item.id === id);
-  console.log(itemRef);
+
   itemRef.complete = !itemRef.complete; // turning it on and off
   todosList.dispatchEvent(new CustomEvent('itemsUpdated'));
 }

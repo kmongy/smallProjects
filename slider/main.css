@@ -43,6 +43,10 @@ body {
 }
 .slide.current {
   z-index: 10;
+  transform: translateX(0);
+}
+.slide.next {
+  z-index: 10;
   transform: translateX(100%);
 }
 .controls {

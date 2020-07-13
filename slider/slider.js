@@ -52,7 +52,7 @@ function Slider(slider) {
 
   //Event listeners
   prevButton.addEventListener('click', () => move('back'));
-  nextButton.addEventListener('click', () => move);
+  nextButton.addEventListener('click', move);
 }
 
 const slider1 = Slider(document.querySelector('.slider'));

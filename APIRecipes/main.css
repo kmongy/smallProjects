@@ -42,3 +42,16 @@ h1 {
   font-family: inherit;
   padding: 0.5rem 0;
 }
+.search button:disabled {
+  opacity: 0.2;
+}
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.recipe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}

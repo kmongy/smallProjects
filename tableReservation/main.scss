@@ -1,0 +1,100 @@
+$red-background: #ec7f72;
+$green-background: #71e9af;
+$purple-background: #dea5ff;
+$blue-background: #538dfa;
+$yellow-background: #fcb74f;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $red-background;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+#table-reservation {
+  display: flex;
+  width: 31.25rem;
+  height: 9rem;
+
+  .table-avatars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgrey;
+    border-radius: 1.5rem 0 0 1.5rem;
+    width: 35%;
+    position: relative;
+
+    .table {
+      background: white;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+    }
+  }
+
+  .table-reservation-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 0 1.5rem 1.5rem 0;
+    width: 65%;
+
+    & p {
+      padding-left: 1.5rem;
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+    }
+    .input-selection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 1rem;
+
+      .input-selection-text {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+
+      .input-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: none;
+          background: lightgrey;
+          border-radius: 50%;
+          font-size: 1.5rem;
+          font-weight: 400;
+          height: 2rem;
+          width: 2rem;
+          cursor: pointer;
+        }
+
+        .number-of-people {
+          border: none;
+          font-family: inherit;
+          font-size: 1.5rem;
+          font-weight: 700;
+          width: 1.5rem;
+        }
+      }
+    }
+  }
+}

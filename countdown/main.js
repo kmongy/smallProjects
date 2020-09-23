@@ -1,4 +1,4 @@
-const deadline = 'September 17 2020';
+const deadline = 'October 9 2020';
 
 function getTimeRemaining(endtime) {
   const total = Date.parse(endtime) - Date.parse(new Date());

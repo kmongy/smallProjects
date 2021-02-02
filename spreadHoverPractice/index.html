@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Practice</title>
+  </head>
+
+  <body>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: rgb(243, 185, 26);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: white;
+        min-height: 100vh;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .jump span {
+        display: inline-block;
+        transition: transform 0.2s;
+        cursor: pointer;
+      }
+
+      .jump span:hover {
+        transform: translateY(-20px) rotate(10deg) scale(2);
+      }
+    </style>
+
+    <h2 class="jump">SPREADS!</h2>
+  </body>
+
+  <script>
+    const heading = document.querySelector('.jump');
+    heading.innerHTML = spanWrap(heading.textContent);
+
+    function spanWrap(word) {
+      return [...word].map(letter => `<span>${letter}</span>`).join('');
+    }
+
+  </script>
+
+</html>
